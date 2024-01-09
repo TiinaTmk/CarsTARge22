@@ -11,6 +11,7 @@ namespace CarsTARge22.Data
             : base(options) { }
 
         public DbSet<Car> Cars { get; set; }
+      
 
 
     }

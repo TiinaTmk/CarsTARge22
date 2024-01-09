@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_9.01\\CarsTARge22.Core\\CarsTARge22.Core.csproj": {}
+    "C:\\Users\\Admin\\Documents\\CarsTARge22_1\\CarsTARge22.Core\\CarsTARge22.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_9.01\\CarsTARge22.Core\\CarsTARge22.Core.csproj": {
+    "C:\\Users\\Admin\\Documents\\CarsTARge22_1\\CarsTARge22.Core\\CarsTARge22.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_9.01\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\CarsTARge22_1\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
         "projectName": "CarsTARge22.Core",
-        "projectPath": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_9.01\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\CarsTARge22_1\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_9.01\\CarsTARge22.Core\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\CarsTARge22_1\\CarsTARge22.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -56,6 +56,30 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.21, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.IO": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
