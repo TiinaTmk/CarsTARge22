@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CarsTARge22.props" />
+</Project>

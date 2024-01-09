@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsTARge22", "CarsTARge22\CarsTARge22.csproj", "{48B5CA20-F8CA-4887-9B32-B91A0AC99540}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsTARge22", "CarsTARge22\CarsTARge22.csproj", "{48B5CA20-F8CA-4887-9B32-B91A0AC99540}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsTARge22.Data", "CarsTARge22.Data\CarsTARge22.Data.csproj", "{9B884043-08DF-4417-979A-CD90EC212E9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsTARge22.Core", "CarsTARge22.Core\CarsTARge22.Core.csproj", "{FDD2BF75-AA12-466B-9067-38CF0DE3B259}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsTARge22.ApplicationServices", "CarsTARge22.ApplicationServices\CarsTARge22.ApplicationServices.csproj", "{1AC83C6C-E468-4AF7-8810-E9DA5768C4A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{48B5CA20-F8CA-4887-9B32-B91A0AC99540}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48B5CA20-F8CA-4887-9B32-B91A0AC99540}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48B5CA20-F8CA-4887-9B32-B91A0AC99540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B884043-08DF-4417-979A-CD90EC212E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B884043-08DF-4417-979A-CD90EC212E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B884043-08DF-4417-979A-CD90EC212E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B884043-08DF-4417-979A-CD90EC212E9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDD2BF75-AA12-466B-9067-38CF0DE3B259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD2BF75-AA12-466B-9067-38CF0DE3B259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD2BF75-AA12-466B-9067-38CF0DE3B259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD2BF75-AA12-466B-9067-38CF0DE3B259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AC83C6C-E468-4AF7-8810-E9DA5768C4A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AC83C6C-E468-4AF7-8810-E9DA5768C4A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AC83C6C-E468-4AF7-8810-E9DA5768C4A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AC83C6C-E468-4AF7-8810-E9DA5768C4A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
