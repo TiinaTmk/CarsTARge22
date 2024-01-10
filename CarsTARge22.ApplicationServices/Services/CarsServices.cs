@@ -1,16 +1,17 @@
 ﻿using CarsTARge22.Core.Domain;
 using CarsTARge22.Core.Dto;
 using CarsTARge22.Core.ServiceInterface;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;  // Add this using statement
+using CarsTARge22.Data;  // Add this using statement
+
 
 namespace CarsTARge22.ApplicationServices.Services
 {
 	public class CarsServices : ICarsServices
 	{
-		private readonly CarsTARge22.Data.CarsTARge22Context _context;
+		private readonly CarContext _context;
 
-		public CarsServices(CarsTARge22.Data.CarsTARge22Context context)
+		public CarsServices(CarContext context)
 			{
 				_context = context;
 			}

@@ -11,12 +11,12 @@ namespace CarsTARge22.Controllers
 {
 	public class CarsController : Controller
 	{
-		private readonly CarsTARge22Context _context;
+		private readonly CarContext _context;
 		private readonly ICarsServices _carsServices;
 
 		public CarsController
 			(
-				CarsTARge22Context context,
+				CarContext context,
 				ICarsServices cars
 			)
 		{
