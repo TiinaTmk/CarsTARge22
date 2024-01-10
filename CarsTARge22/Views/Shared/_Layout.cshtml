@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/CarsTARge22.styles.css" asp-append-version="true" />
+
+    
+    <style>
+        body {
+            background-image: url('~/img/cars_taust.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,7 +34,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="cars-menu">
                             <!-- Updated the href attribute to point directly to Cars/Index -->
                             <a class="nav-link text-dark" href="~/Cars">Cars</a>
                         </li>

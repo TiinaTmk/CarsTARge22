@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fl0hVfxIsQcqrmRrkIbDB9FuI+kk4i8CWgEsCtLhD3OnYGhD754yBIYSm+uAmxp0s/Z+Du7zQG1cqa0833uHsg==",
+  "dgSpecHash": "D0T82byWLJArkFx1TTUa+J66G+4xnkLsHdrUkJ4bhwRJou/zwOWcIMoDBgLszqZWi/OJFUp2QrxiY/ib1j+zIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_1_õ\\CarsTARge22.ApplicationServices\\CarsTARge22.ApplicationServices.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\CarsTARge22_1\\CarsTARge22.ApplicationServices\\CarsTARge22.ApplicationServices.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

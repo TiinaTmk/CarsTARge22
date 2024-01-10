@@ -1,17 +1,8 @@
-﻿
-@model IEnumerable<CarsTARge22.Models.Cars.CarIndexViewModel>
-
-@{
-    int rowNumber = 1;
-}
-
+﻿@model IEnumerable<CarsTARge22.Models.Cars.CarIndexViewModel>
 
 <div>
-    <a asp-action="create" asp-controller="Cars" type="submit" class="btn btn-primary">Create</a>
+    <a asp-action="create" asp-controller="Cars" type="submit" class="btn btn-success">Create</a>
 </div>
-
-
-
 
 <div class="h1">
     Cars
@@ -34,7 +25,6 @@
             @foreach (var car in Model)
             {
                 <tr>
-                    <td>@rowNumber</td>
                     <td>@car.Id</td>
                     <td>@car.Brand</td>
                     <td>@car.Model</td>
@@ -48,8 +38,6 @@
                         <a asp-action="delete" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-outline-danger">Delete</a>
                     </td>
                 </tr>
-
-                rowNumber += 1;
             }
         </tbody>
     </table>
