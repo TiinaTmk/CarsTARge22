@@ -1,8 +1,8 @@
 using CarsTARge22.ApplicationServices.Services;
 using CarsTARge22.Core.ServiceInterface;
-using Microsoft.EntityFrameworkCore;
 using CarsTARge22.Data;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace CarsTARge22
 {
@@ -17,19 +17,22 @@ namespace CarsTARge22
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            // Add service to the container.
+            // Add services to the container.
             if (builder.Environment.IsDevelopment())
             {
                 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
             }
+
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddDbContext<CarContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddScoped<ICarsServices, CarsServices>();
 
             var app = builder.Build();
+
+            // Configure logging here if needed
 
             if (!app.Environment.IsDevelopment())
             {
@@ -49,9 +52,12 @@ namespace CarsTARge22
 
             app.UseAuthorization();
 
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
 
             using (var scope = app.Services.CreateScope())
             {
@@ -67,13 +73,18 @@ namespace CarsTARge22
             try
             {
                 var context = services.GetRequiredService<CarContext>();
+
+                // Consider using migrations in a production environment
                 context.Database.EnsureCreated();
+
+                // Consider using migrations in a production environment
                 DbInitializer.Initialize(context);
             }
             catch (Exception ex)
             {
                 var logger = services.GetRequiredService<ILogger<Program>>();
                 logger.LogError(ex, "An error occurred creating the DB.");
+                // Handle the exception based on your application's requirements
             }
         }
     }

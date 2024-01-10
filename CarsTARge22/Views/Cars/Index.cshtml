@@ -1,5 +1,56 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
+@model IEnumerable<CarsTARge22.Models.Cars.CarIndexViewModel>
+
 @{
+    int rowNumber = 1;
 }
+
+
+<div>
+    <a asp-action="create" asp-controller="Cars" type="submit" class="btn btn-primary">Create</a>
+</div>
+
+
+
+
+<div class="h1">
+    Cars
+</div>
+<form method="post">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Brand</th>
+                <th scope="col">Model</th>
+                <th scope="col">Year</th>
+                <th scope="col">Price</th>
+                <th scope="col">CreatedAt</th>
+                <th scope="col">ModifiedAt</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var car in Model)
+            {
+                <tr>
+                    <td>@rowNumber</td>
+                    <td>@car.Id</td>
+                    <td>@car.Brand</td>
+                    <td>@car.Model</td>
+                    <td>@car.Year</td>
+                    <td>@car.Price</td>
+                    <td>@car.CreatedAt</td>
+                    <td>@car.ModifiedAt</td>
+                    <td>
+                        <a asp-action="details" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-info">Details</a>
+                        <a asp-action="update" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-primary">Update</a>
+                        <a asp-action="delete" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-outline-danger">Delete</a>
+                    </td>
+                </tr>
+
+                rowNumber += 1;
+            }
+        </tbody>
+    </table>
+</form>

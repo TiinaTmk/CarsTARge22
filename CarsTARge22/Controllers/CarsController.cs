@@ -40,9 +40,6 @@ namespace CarsTARge22.Controllers
 					Price = x.Price
 				});
 
-		
-
-
 			return View(result);
 		}
 
