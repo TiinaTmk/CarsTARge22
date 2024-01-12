@@ -17,3 +17,9 @@ body {
   margin-bottom: 60px;
 }
 
+.body-img {
+    background-image: url('/img/cars1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}

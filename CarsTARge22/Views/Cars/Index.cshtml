@@ -11,7 +11,7 @@
     <table class="table table-hover">
         <thead>
             <tr>
-                <th scope="col">Id</th>
+                <th scope="col">Nr</th>
                 <th scope="col">Brand</th>
                 <th scope="col">Model</th>
                 <th scope="col">Year</th>
@@ -22,23 +22,28 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var car in Model)
+            @foreach (var car in Model.Select((value, index) => new { Value = value, Index = index + 1 }))
             {
                 <tr>
-                    <td>@car.Id</td>
-                    <td>@car.Brand</td>
-                    <td>@car.Model</td>
-                    <td>@car.Year</td>
-                    <td>@car.Price</td>
-                    <td>@car.CreatedAt</td>
-                    <td>@car.ModifiedAt</td>
+                    <td>@car.Index</td>
+                    <td>@car.Value.Brand</td>
+                    <td>@car.Value.Model</td>
+                    <td>@car.Value.Year</td>
+                    <td>@car.Value.Price</td>
+                    <td>@car.Value.CreatedAt</td>
+                    <td>@car.Value.ModifiedAt</td>
                     <td>
-                        <a asp-action="details" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-info">Details</a>
-                        <a asp-action="update" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-primary">Update</a>
-                        <a asp-action="delete" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-outline-danger">Delete</a>
+                        <a asp-action="details" asp-controller="cars" asp-route-id="@car.Value.Id" class="btn btn-info">Details</a>
+                        <a asp-action="update" asp-controller="cars" asp-route-id="@car.Value.Id" class="btn btn-primary">Update</a>
+                        <a asp-action="delete" asp-controller="cars" asp-route-id="@car.Value.Id" class="btn btn-outline-danger">Delete</a>
                     </td>
                 </tr>
             }
+
+            <div class="container">
+                <main role="main" class="pb-3 body-img">
+                </main>
+            </div>
         </tbody>
     </table>
 </form>

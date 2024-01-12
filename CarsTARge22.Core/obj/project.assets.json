@@ -4005,11 +4005,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\CarsTARge22_1\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_1_12.01\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
       "projectName": "CarsTARge22.Core",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\CarsTARge22_1\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
+      "projectPath": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_1_12.01\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\CarsTARge22_1\\CarsTARge22.Core\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_1_12.01\\CarsTARge22.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
