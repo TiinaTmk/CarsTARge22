@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using CarsTARge22.Core.Domain;  // Add this using statement
+using CarsTARge22.Core.Domain; 
 
 namespace CarsTARge22.Data
 {
@@ -10,15 +10,15 @@ namespace CarsTARge22.Data
         {
             context.Database.EnsureCreated();
 
-            // Look for any cars.
+            
             if (context.Cars.Any())
             {
-                return;   // DB has been seeded
+                return;   
             }
 
             var cars = new Car[]
             {
-                new Car { Brand = "Carson", Model = "Alexander", Year = 2005 }
+                new Car { }
             };
 
             foreach (Car car in cars)

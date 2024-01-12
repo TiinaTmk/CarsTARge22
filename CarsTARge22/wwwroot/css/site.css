@@ -23,3 +23,37 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
 }
+
+.background-img {
+    background-image: url('/img/cars2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.background-img1 {
+    background-image: url('/img/cars3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.background-img2 {
+    background-image: url('/img/cars5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.background-img3 {
+    background-image: url('/img/cars4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* Menüüriba stiilid */
+.navbar {
+    background-color: #87CEEB; /* Helesinine värv - võite muuta vastavalt soovile */
+}
+

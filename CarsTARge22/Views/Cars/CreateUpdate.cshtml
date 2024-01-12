@@ -1,5 +1,9 @@
 ﻿@model CarsTARge22.Models.Cars.CarCreateUpdateViewModel
 
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
 @if (Model.Id.HasValue)
 {
     <h1>Update</h1>
@@ -10,6 +14,7 @@ else
 
 }
 
+<h4>Cars</h4>
 
 <div>
     <form method="post" enctype="multipart/form-data">
@@ -62,20 +67,7 @@ else
 </div>
 
 
-@* @section Scripts
-    {
-    <script>
-        $(document).ready(function () {
-            $('.custom-file-input').on("change", function () {
-                var fileLabel = $(this).next('.custom-file-input');
-                var files = $(this)[0].files;
-                if (files.length > 1) {
-                    fileLabel.html(files.length + ' files selected');
-                }
-                else if (files.length == 1) {
-                    fileLabel.html(files[0].name);
-                }
-            });
-        });
-    </script>
-} *@
+<div class="background-img3">
+    <main role="main" class="pb-3">
+    </main>
+</div>
