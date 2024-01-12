@@ -63,3 +63,16 @@ C:\Users\Admin\Documents\CarsTARge22_1\CarsTARge22.Core\obj\Debug\net6.0\CarsTAR
 C:\Users\Admin\Documents\CarsTARge22_1\CarsTARge22.Core\obj\Debug\net6.0\refint\CarsTARge22.Core.dll
 C:\Users\Admin\Documents\CarsTARge22_1\CarsTARge22.Core\obj\Debug\net6.0\CarsTARge22.Core.pdb
 C:\Users\Admin\Documents\CarsTARge22_1\CarsTARge22.Core\obj\Debug\net6.0\ref\CarsTARge22.Core.dll
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Core\bin\Debug\net6.0\CarsTARge22.Core.deps.json
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Core\bin\Debug\net6.0\CarsTARge22.Core.dll
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Core\bin\Debug\net6.0\CarsTARge22.Core.pdb
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Core\obj\Debug\net6.0\CarsTARge22.Core.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Core\obj\Debug\net6.0\CarsTARge22.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Core\obj\Debug\net6.0\CarsTARge22.Core.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Core\obj\Debug\net6.0\CarsTARge22.Core.AssemblyInfo.cs
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Core\obj\Debug\net6.0\CarsTARge22.Core.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Core\obj\Debug\net6.0\CarsTARge22.Core.sourcelink.json
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Core\obj\Debug\net6.0\CarsTARge22.Core.dll
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Core\obj\Debug\net6.0\refint\CarsTARge22.Core.dll
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Core\obj\Debug\net6.0\CarsTARge22.Core.pdb
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Core\obj\Debug\net6.0\ref\CarsTARge22.Core.dll

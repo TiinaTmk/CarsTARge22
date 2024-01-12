@@ -22,11 +22,12 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
     <PackageReference Include="System.Collections" Version="4.3.0" />
+    <PackageReference Include="System.Linq" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
 	  <ProjectReference Include="..\CarsTARge22.ApplicationServices\CarsTARge22.ApplicationServices.csproj" />
-	  <ProjectReference Include="..\CarsTARge22.Core\CarsTARge22.Core.csproj" />
+	  <ProjectReference Include="..\CarsTARge22.Data\CarsTARge22.Data.csproj" />
   </ItemGroup>
 
 </Project>
