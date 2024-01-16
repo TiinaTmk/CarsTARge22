@@ -1,6 +1,5 @@
-﻿using CarsTARge22.Core.Domain;
-using Microsoft.EntityFrameworkCore;
-
+﻿using Microsoft.EntityFrameworkCore;
+using CarsTARge22.Core.Domain;
 
 
 namespace CarsTARge22.Data
@@ -11,10 +10,7 @@ namespace CarsTARge22.Data
             : base(options) { }
 
         public DbSet<Car> Cars { get; set; }
+       
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Car>().ToTable("Car");
-        }
     }
 }

@@ -37,8 +37,10 @@ namespace CarsTARge22.Controllers
 					Brand = x.Brand,
 					Model = x.Model,
 					Year = x.Year,
-					Price = (int)x.Price
-				});
+					Price = (int)x.Price,
+					Transmission = x.Transmission,
+					Fuel = x.Fuel,
+				}) ;
 
 			return View(result);
 		}
@@ -60,7 +62,11 @@ namespace CarsTARge22.Controllers
 			vm.Model = car.Model;
 			vm.Year = car.Year;
 			vm.Price = (int)car.Price;
-			vm.CreatedAt = car.CreatedAt;
+			vm.Transmission = car.Transmission;
+			vm.Fuel = car.Fuel;
+			
+
+            vm.CreatedAt = car.CreatedAt;
 			vm.ModifiedAt = car.ModifiedAt;
 
 			return View(vm);
@@ -84,7 +90,9 @@ namespace CarsTARge22.Controllers
 				Model = vm.Model,
 				Year = vm.Year,
 				Price = vm.Price,
-				CreatedAt = vm.CreatedAt,
+                Transmission = vm.Transmission,
+                Fuel = vm.Fuel,
+                CreatedAt = vm.CreatedAt,
 				ModifiedAt = vm.ModifiedAt,
 			};
 

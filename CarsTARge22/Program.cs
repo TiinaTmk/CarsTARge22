@@ -77,8 +77,6 @@ namespace CarsTARge22
                 // Consider using migrations in a production environment
                 context.Database.EnsureCreated();
 
-                // Consider using migrations in a production environment
-                DbInitializer.Initialize(context);
             }
             catch (Exception ex)
             {

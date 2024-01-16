@@ -28,7 +28,9 @@ namespace CarsTARge22.ApplicationServices.Services
 					Model = dto.Model,
 					Year = dto.Year,
 					Price = dto.Price,
-					CreatedAt = DateTime.Now,
+                    Transmission = dto.Transmission,
+                    Fuel = dto.Fuel ?? string.Empty,
+                    CreatedAt = DateTime.Now,
 					ModifiedAt = DateTime.Now,
 				};
 
