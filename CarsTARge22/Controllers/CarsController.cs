@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using CarsTARge22.Core.Dto;
 using CarsTARge22.Core.ServiceInterface;
 using CarsTARge22.Data;
 using CarsTARge22.Models.Cars;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 namespace CarsTARge22.Controllers
 {

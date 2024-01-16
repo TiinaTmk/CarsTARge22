@@ -27,8 +27,6 @@
                     <th scope="col">Price</th>
                     <th scope="col">Transmission</th>
                     <th scope="col">Fuel</th>
-                    <th scope="col">CreatedAt</th>
-                    <th scope="col">ModifiedAt</th>
                     <th></th>
                 </tr>
             </thead>
@@ -43,8 +41,7 @@
                         <td>@car.Value.Price</td>
                         <td>@car.Value.Transmission</td>
                         <td>@car.Value.Fuel</td>
-                        <td>@car.Value.CreatedAt</td>
-                        <td>@car.Value.ModifiedAt</td>
+               
                         <td>
                             <a asp-action="details" asp-controller="cars" asp-route-id="@car.Value.Id" class="btn btn-info">Details</a>
                             <a asp-action="update" asp-controller="cars" asp-route-id="@car.Value.Id" class="btn btn-primary">Update</a>

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CarsTARge22.Core.Domain
+﻿namespace CarsTARge22.Core.Domain
 {
 	public class Car
 	{

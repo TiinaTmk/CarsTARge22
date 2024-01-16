@@ -17,7 +17,7 @@ namespace CarsTARge22
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            // Add services to the container.
+            
             if (builder.Environment.IsDevelopment())
             {
                 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
@@ -32,7 +32,7 @@ namespace CarsTARge22
 
             var app = builder.Build();
 
-            // Configure logging here if needed
+            
 
             if (!app.Environment.IsDevelopment())
             {
@@ -74,7 +74,7 @@ namespace CarsTARge22
             {
                 var context = services.GetRequiredService<CarContext>();
 
-                // Consider using migrations in a production environment
+              
                 context.Database.EnsureCreated();
 
             }
@@ -82,7 +82,7 @@ namespace CarsTARge22
             {
                 var logger = services.GetRequiredService<ILogger<Program>>();
                 logger.LogError(ex, "An error occurred creating the DB.");
-                // Handle the exception based on your application's requirements
+                
             }
         }
     }

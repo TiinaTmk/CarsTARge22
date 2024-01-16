@@ -1,8 +1,8 @@
 ﻿using CarsTARge22.Core.Domain;
 using CarsTARge22.Core.Dto;
 using CarsTARge22.Core.ServiceInterface;
-using Microsoft.EntityFrameworkCore;  // Add this using statement
-using CarsTARge22.Data;  // Add this using statement
+using Microsoft.EntityFrameworkCore;  
+using CarsTARge22.Data;  
 
 
 namespace CarsTARge22.ApplicationServices.Services

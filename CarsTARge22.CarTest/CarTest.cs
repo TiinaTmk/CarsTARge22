@@ -1,6 +1,4 @@
-﻿using CarsTARge22.ApplicationServices.Services;
-using CarsTARge22.Core.Domain;
-using CarsTARge22.Core.Dto;
+﻿using CarsTARge22.Core.Dto;
 using CarsTARge22.Core.ServiceInterface;
 
 namespace CarsTARge22.Test
@@ -20,6 +18,8 @@ namespace CarsTARge22.Test
             car.Model = "mkmk";
             car.Year = 5;
             car.Price = 3;
+            car.Transmission = "Automatic";
+            car.Fuel = "Petrol";
             car.CreatedAt = DateTime.Now;
             car.ModifiedAt = DateTime.Now;
             
@@ -95,6 +95,8 @@ namespace CarsTARge22.Test
             car.Brand = "1024";
             car.Year = 2003;
             car.Price = 333;
+            car.Transmission = "Automatic";
+            car.Fuel = "Petrol";
             car.CreatedAt = DateTime.Now;
             car.ModifiedAt = DateTime.Now;
 
@@ -136,6 +138,8 @@ namespace CarsTARge22.Test
                 Model = "bcd",
                 Year = 2003,
                 Price = 3,
+                Transmission = "Automatic",
+                Fuel = "Petrol",
                 CreatedAt = DateTime.Now,
                 ModifiedAt = DateTime.Now,
             };
@@ -151,6 +155,8 @@ namespace CarsTARge22.Test
                 Model = "bcdbcd",
                 Year = 53,
                 Price = 300,
+                Transmission = "Automatic",
+                Fuel = "Petrol",
                 CreatedAt = DateTime.Now,
                 ModifiedAt = DateTime.Now,
             };
@@ -167,6 +173,8 @@ namespace CarsTARge22.Test
                 Model = "opopopo",
                 Year = 123,
                 Price = 123,
+                Transmission = "Automatic",
+                Fuel = "Petrol",
                 CreatedAt = DateTime.Now.AddYears(-1),
                 ModifiedAt = DateTime.Now.AddYears(-1),
             };
