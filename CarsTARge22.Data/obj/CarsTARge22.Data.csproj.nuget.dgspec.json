@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01\\CarsTARge22.Data\\CarsTARge22.Data.csproj": {}
+    "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Data\\CarsTARge22.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01\\CarsTARge22.Core\\CarsTARge22.Core.csproj": {
+    "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Core\\CarsTARge22.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
         "projectName": "CarsTARge22.Core",
-        "projectPath": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01\\CarsTARge22.Core\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,7 +69,19 @@
               "target": "Package",
               "version": "[6.0.21, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.21, )"
             },
@@ -134,14 +146,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01\\CarsTARge22.Data\\CarsTARge22.Data.csproj": {
+    "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Data\\CarsTARge22.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01\\CarsTARge22.Data\\CarsTARge22.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Data\\CarsTARge22.Data.csproj",
         "projectName": "CarsTARge22.Data",
-        "projectPath": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01\\CarsTARge22.Data\\CarsTARge22.Data.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Data\\CarsTARge22.Data.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01\\CarsTARge22.Data\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -163,8 +175,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01\\CarsTARge22.Core\\CarsTARge22.Core.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01\\CarsTARge22.Core\\CarsTARge22.Core.csproj"
+              "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Core\\CarsTARge22.Core.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Core\\CarsTARge22.Core.csproj"
               }
             }
           }
@@ -203,7 +215,19 @@
               "target": "Package",
               "version": "[6.0.21, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.21, )"
             },

@@ -112,3 +112,5 @@ C:\Users\Admin\Source\Repos\CarsTARge22_16.01\CarsTARge22.Data\obj\Debug\net6.0\
 C:\Users\Admin\Source\Repos\CarsTARge22_16.01\CarsTARge22.Data\obj\Debug\net6.0\ref\CarsTARge22.Data.dll
 C:\Users\Admin\Source\Repos\CarsTARge22_16.01\CarsTARge22.Data\bin\Debug\net6.0\CarsTARge22.Data.runtimeconfig.json
 C:\Users\Admin\Source\Repos\CarsTARge22_16.01\CarsTARge22.Data\obj\Debug\net6.0\CarsTARge22.Data.genruntimeconfig.cache
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Data\bin\Debug\net6.0\CarsTARge22.Data.runtimeconfig.json
+C:\Users\Admin\Documents\CarsTARge22\CarsTARge22.Data\obj\Debug\net6.0\CarsTARge22.Data.genruntimeconfig.cache

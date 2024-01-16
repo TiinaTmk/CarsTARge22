@@ -56,6 +56,8 @@ namespace CarsTARge22.ApplicationServices.Services
 				car.Model = dto.Model;
 				car.Year = dto.Year;
 				car.Price = dto.Price;
+				car.Transmission = dto.Transmission;
+				car.Fuel = dto.Fuel;
 				car.CreatedAt = dto.CreatedAt;
 				car.ModifiedAt = DateTime.Now;
 

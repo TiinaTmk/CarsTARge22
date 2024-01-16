@@ -4,194 +4,195 @@ using CarsTARge22.Core.Dto;
 using CarsTARge22.Core.ServiceInterface;
 using CarsTARge22.Data;
 using CarsTARge22.Models.Cars;
-
-
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CarsTARge22.Controllers
 {
-	public class CarsController : Controller
-	{
-		private readonly CarContext _context;
-		private readonly ICarsServices _carsServices;
+    public class CarsController : Controller
+    {
+        private readonly CarContext _context;
+        private readonly ICarsServices _carsServices;
 
-		public CarsController
-			(
-				CarContext context,
-				ICarsServices cars
-			)
-		{
-			_context = context;
-			_carsServices = cars;
-		}
+        public CarsController(CarContext context, ICarsServices cars)
+        {
+            _context = context;
+            _carsServices = cars;
+        }
 
-		[HttpGet]
+        [HttpGet]
+        public IActionResult Index()
+        {
+            var result = _context.Cars
+                .OrderByDescending(y => y.CreatedAt)
+                .Select(x => new CarIndexViewModel
+                {
+                    Id = x.Id,
+                    Brand = x.Brand,
+                    Model = x.Model,
+                    Year = x.Year,
+                    Price = (int)x.Price,
+                    Transmission = x.Transmission,
+                    Fuel = x.Fuel,
+                });
 
+            return View(result);
+        }
 
-		public IActionResult Index()
-		{
-			var result = _context.Cars
-				.OrderByDescending(y => y.CreatedAt)
-				.Select(x => new CarIndexViewModel
-				{
-					Id = x.Id,
-					Brand = x.Brand,
-					Model = x.Model,
-					Year = x.Year,
-					Price = (int)x.Price,
-					Transmission = x.Transmission,
-					Fuel = x.Fuel,
-				}) ;
+        [HttpGet]
+        public async Task<IActionResult> Details(Guid id)
+        {
+            var car = await _carsServices.DetailsAsync(id);
 
-			return View(result);
-		}
+            if (car == null)
+            {
+                return NotFound();
+            }
 
-		[HttpGet]
-		public async Task<IActionResult> Details(Guid id)
-		{
-			var car = await _carsServices.DetailsAsync(id);
+            var vm = new CarDetailsViewModel
+            {
+                Id = car.Id,
+                Brand = car.Brand,
+                Model = car.Model,
+                Year = car.Year,
+                Price = (int)car.Price,
+                Transmission = car.Transmission,
+                Fuel = car.Fuel,
+                CreatedAt = car.CreatedAt,
+                ModifiedAt = car.ModifiedAt
+            };
 
-			if (car == null)
-			{
-				return NotFound();
-			}
+            return View(vm);
+        }
 
-			var vm = new CarDetailsViewModel();
+        [HttpGet]
+        public IActionResult Create()
+        {
+            var vm = new CarCreateUpdateViewModel();
+            return View("CreateUpdate", vm);
+        }
 
-			vm.Id = car.Id;
-			vm.Brand = car.Brand;
-			vm.Model = car.Model;
-			vm.Year = car.Year;
-			vm.Price = (int)car.Price;
-			vm.Transmission = car.Transmission;
-			vm.Fuel = car.Fuel;
-			
+        [HttpPost]
+        public async Task<IActionResult> Create(CarCreateUpdateViewModel vm)
+        {
+            if (ModelState.IsValid)
+            {
+                var dto = new CarDto
+                {
+                    Brand = vm.Brand,
+                    Model = vm.Model,
+                    Year = vm.Year,
+                    Price = vm.Price,
+                    Transmission = vm.Transmission,
+                    Fuel = vm.Fuel,
+                    CreatedAt = DateTime.Now,
+                    ModifiedAt = DateTime.Now,
+                };
 
-            vm.CreatedAt = car.CreatedAt;
-			vm.ModifiedAt = car.ModifiedAt;
+                var result = await _carsServices.Create(dto);
 
-			return View(vm);
-		}
+                if (result != null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+            }
 
-		[HttpGet]
-		public IActionResult Create()
-		{
-			CarCreateUpdateViewModel vm = new();
+            return View("CreateUpdate", vm);
+        }
 
-			return View("CreateUpdate", vm);
-		}
+        [HttpGet]
+        public async Task<IActionResult> Update(Guid id)
+        {
+            var car = await _carsServices.DetailsAsync(id);
 
-		[HttpPost]
-		public async Task<IActionResult> Create(CarCreateUpdateViewModel vm)
-		{
-			var dto = new CarDto()
-			{
-				Id = vm.Id,
-				Brand = vm.Brand,
-				Model = vm.Model,
-				Year = vm.Year,
-				Price = vm.Price,
-                Transmission = vm.Transmission,
-                Fuel = vm.Fuel,
-                CreatedAt = vm.CreatedAt,
-				ModifiedAt = vm.ModifiedAt,
-			};
+            if (car == null)
+            {
+                return NotFound();
+            }
 
-			var result = await _carsServices.Create(dto);
+            var vm = new CarCreateUpdateViewModel
+            {
+                Id = car.Id,
+                Brand = car.Brand,
+                Model = car.Model,
+                Year = car.Year,
+                Price = (int)car.Price,
+                Transmission = car.Transmission,
+                Fuel = car.Fuel,
+                CreatedAt = car.CreatedAt,
+                ModifiedAt = car.ModifiedAt
+            };
 
-			if (result == null)
-			{
-				return RedirectToAction(nameof(Index));
-			}
+            return View("CreateUpdate", vm);
+        }
 
-			return RedirectToAction(nameof(Index), vm);
-		}
+        [HttpPost]
+        public async Task<IActionResult> Update(CarCreateUpdateViewModel vm)
+        {
+            if (ModelState.IsValid)
+            {
+                var dto = new CarDto
+                {
+                    Id = vm.Id,
+                    Brand = vm.Brand,
+                    Model = vm.Model,
+                    Year = vm.Year,
+                    Price = vm.Price,
+                    Transmission = vm.Transmission,
+                    Fuel = vm.Fuel,
+                    CreatedAt = vm.CreatedAt,
+                    ModifiedAt = DateTime.Now,
+                };
 
-		[HttpGet]
-		public async Task<IActionResult> Update(Guid id)
-		{
-			var car = await _carsServices.DetailsAsync(id);
+                var result = await _carsServices.Update(dto);
 
-			if (car == null)
-			{
-				return NotFound();
-			}
+                if (result != null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+            }
 
-			var vm = new CarCreateUpdateViewModel();
+            return View("CreateUpdate", vm);
+        }
 
-			vm.Id = car.Id;
-			vm.Brand = car.Brand;
-			vm.Model = car.Model;
-			vm.Year = car.Year;
-			vm.Price = (int)car.Price;
-			vm.CreatedAt = car.CreatedAt;
-			vm.ModifiedAt = car.ModifiedAt;
+        [HttpGet]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var car = await _carsServices.DetailsAsync(id);
 
+            if (car == null)
+            {
+                return NotFound();
+            }
 
-			return View("CreateUpdate", vm);
-		}
+            var vm = new CarDeleteViewModel
+            {
+                Id = car.Id,
+                Brand = car.Brand,
+                Model = car.Model,
+                Year = car.Year,
+                Price = (int)car.Price,
+                Transmission = car.Transmission,
+                Fuel = car.Fuel,
+                CreatedAt = car.CreatedAt,
+                ModifiedAt = car.ModifiedAt
+            };
 
-		[HttpPost]
-		public async Task<IActionResult> Update(CarCreateUpdateViewModel vm)
-		{
-			var dto = new CarDto();
+            return View(vm);
+        }
 
-			dto.Id = vm.Id;
-			dto.Brand = vm.Brand;
-			dto.Model = vm.Model;
-			dto.Year = vm.Year;
-			dto.Price = vm.Price;
-			dto.CreatedAt = vm.CreatedAt;
-			dto.ModifiedAt = vm.ModifiedAt;
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmation(Guid id)
+        {
+            var carId = await _carsServices.Delete(id);
 
-			var result = await _carsServices.Update(dto);
+            if (carId == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
 
-			if (result == null)
-			{
-				return RedirectToAction(nameof(Index));
-			}
-
-			return RedirectToAction(nameof(Index), vm);
-		}
-
-		[HttpGet]
-		public async Task<IActionResult> Delete(Guid id)
-		{
-			var car = await _carsServices.DetailsAsync(id);
-
-			if (car == null)
-			{
-				return NotFound();
-			}
-
-			var vm = new CarDeleteViewModel();
-
-			vm.Id = car.Id;
-			vm.Brand = car.Brand;
-			vm.Model = car.Model;
-			vm.Year = car.Year;
-			vm.Price = (int)car.Price;
-			vm.CreatedAt = car.CreatedAt;
-			vm.ModifiedAt = car.ModifiedAt;
-
-			return View(vm);
-		}
-
-
-		[HttpPost]
-		public async Task<IActionResult> DeleteConfirmation(Guid id)
-		{
-			var carId = await _carsServices.Delete(id);
-
-			if (carId == null)
-			{
-				return RedirectToAction(nameof(Index));
-			}
-
-			return RedirectToAction(nameof(Index));
-		}
-	}
+            return RedirectToAction(nameof(Index));
+        }
+    }
 }
-
-		
-
-		

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarsTARge22.ApplicationServices")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a8168081fb66201d19a9defadb15d1fe0198090")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+102f6e50b8ae652327808a6c6fd72e09a26c65ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarsTARge22.ApplicationServices")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarsTARge22.ApplicationServices")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

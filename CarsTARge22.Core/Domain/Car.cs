@@ -14,7 +14,6 @@ namespace CarsTARge22.Core.Domain
 			public int Year { get; set; }
 			public int Price { get; set; }
 			public string Transmission { get; set; }
-
             public string Fuel { get; set; } = string.Empty;
             public DateTime CreatedAt { get; set; }
 			public DateTime ModifiedAt { get; set; }
