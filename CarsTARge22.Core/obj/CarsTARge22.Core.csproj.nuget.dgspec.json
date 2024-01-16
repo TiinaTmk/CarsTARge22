@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Core\\CarsTARge22.Core.csproj": {}
+    "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01.24\\CarsTARge22.Core\\CarsTARge22.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Core\\CarsTARge22.Core.csproj": {
+    "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01.24\\CarsTARge22.Core\\CarsTARge22.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01.24\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
         "projectName": "CarsTARge22.Core",
-        "projectPath": "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
+        "projectPath": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01.24\\CarsTARge22.Core\\CarsTARge22.Core.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\CarsTARge22\\CarsTARge22.Core\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\Repos\\CarsTARge22_16.01.24\\CarsTARge22.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -62,6 +62,10 @@
               "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.21, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
               "version": "[6.0.21, )"
             },
@@ -120,6 +124,10 @@
             "Microsoft.Extensions.Options": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             },
             "System.Collections": {
               "target": "Package",
